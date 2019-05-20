@@ -32,7 +32,7 @@ $command = 'raspistill  --nopreview -o /opt/temp/test01.jpg '.$quality.$width.$h
 
 $escaped_command = escapeshellcmd($command);
  
-exec($command, $test, $retval);
+exec($escaped_command, $test, $retval);
 #echo '<p>'.$command.'</p>';
 echo '<p>'.implode ( '</p><p>' , $test ).'</p>';
 echo "<img src='image.jpg'/>";
